@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form login</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <form action="LoginServlet" id="form-login" method="post">
+            <h1 class="form-heading">Login</h1>
+            <div class="form-group">
+                <i class="far fa-user"></i>
+                <input type="text" class="form-input" name="username" placeholder="User">
+            </div>
+            <div class="form-group">
+                <i class="fas fa-key"></i>
+                <input type="password" class="form-input" name="password" placeholder="password">
+                <div id="eye">
+                    <i class="far fa-eye"></i>
+                </div>
+            </div>
+            <button type="submit" class="form-submit" name="Sign in">Sign In</button>
+            <a href="register.html" class="form-signup">Sign Up</a>
+        </form>
+
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/app.js"></script>
+<script src="js/eye.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            //tim tat ca cac li co sub-menu va them vao no class has-child
+            $('.sub-menu').parent('li').addClass('has-child')
+        });
+    </script>
+</html>

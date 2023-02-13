@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class='bx bx-menu' id="btn"></i>
+        <i class='bx bx-x' id="cancel"></i>
+
+    </label>
+    <div class="sidebar">
+        <header >
+            <h1 id="username"></h1>
+            <h6 id="role"></h6>
+        </header>
+        
+        <ul>
+            <li><a href=""> <i class='bx bxs-user-detail' ></i> Profile </a></li>
+            <li><a href=""> <i class='bx bx-bed' ></i> Room </a></li>
+            <li><a href=""> <i class='bx bx-user' ></i> Customer </a></li>
+            <li><a href=""> <i class='bx bx-bookmark' ></i> Ticket </a></li>
+            <li><a href=""> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href=""> <i class='bx bx-check' ></i> Vote </a></li>
+            <li><a href=""> <i class='bx bxs-credit-card' ></i> Bill </a></li>
+            <li><a href=""> <i class='bx bx-log-out' ></i> Logout </a></li>
+        </ul>
+        
+    </div>
+    <section></section>
+</body>
+
+<script>
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+    document.getElementById('username').innerHTML = userInfo.username;
+    document.getElementById('role').innerHTML = userInfo.role;
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/admin.js"></script>
+
+</html>
