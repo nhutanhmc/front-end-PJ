@@ -1,12 +1,12 @@
-document.getElementById("form-login").addEventListener("submit", function(event) {
+document.getElementById("form-register").addEventListener("submit", function (event) {
   event.preventDefault();
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  const role = document.getElementById("role").value;
+  // const role = document.getElementById("role").value;
   const data = {
     username: username,
     password: password,
-    role: role
+    // role: role
   };
 
   fetch("https://test-connect-api.onrender.com/auth/register", {
@@ -19,13 +19,26 @@ document.getElementById("form-login").addEventListener("submit", function(event)
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      // Kiểm tra trường error trong response
-      if (data.error) {
+      // kiểm tra data trả về có bị trùng với lỗi tên là "Người dùng đã tồn tại" ở đây
+      // em dùng trò này bởi vì khi em dùng data.error cái error hệ thống nó báo khác với
+      // data đưa ra data lúc đó đưa ra là lỗi POST đó còn error lại ra một lỗi khác
+      // hiện tại để như v mốt em sẽ sửa lại sau
+
+      // if(data.error)
+      if (data === "Người dùng đã tồn tại") {
         // Hiển thị thông báo lỗi
-        alert("Đăng ký thất bại: " + data.error);
+        alert(data);
       } else {
         // Hiển thị thông báo thành công
         alert("Đăng ký thành công!");
+        var result = confirm("Ban co muon dang nhap luon");
+        if (result == true) {
+          sessionStorage.setItem('userInfo', JSON.stringify(data));
+          window.location.href = 'admin.html';
+        } else {
+          sessionStorage.clear();
+          window.location.href = "login.html";
+        }
       }
     })
     .catch(error => {

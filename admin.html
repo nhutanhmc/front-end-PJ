@@ -1,48 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="css/admin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
 </head>
 
 <body>
-    <input type="checkbox" id="check">
-    <label for="check">
-        <i class='bx bx-menu' id="btn"></i>
-        <i class='bx bx-x' id="cancel"></i>
-
-    </label>
     <div class="sidebar">
-        <header >
-            <h1 id="username"></h1>
-            <h6 id="role"></h6>
-        </header>
-        
+        <header id="username">Name</header>
         <ul>
-            <li><a href=""> <i class='bx bxs-user-detail' ></i> Profile </a></li>
-            <li><a href=""> <i class='bx bx-bed' ></i> Room </a></li>
-            <li><a href=""> <i class='bx bx-user' ></i> Customer </a></li>
-            <li><a href=""> <i class='bx bx-bookmark' ></i> Ticket </a></li>
-            <li><a href=""> <i class='bx bx-user-voice' ></i> Service </a></li>
-            <li><a href=""> <i class='bx bx-check' ></i> Vote </a></li>
-            <li><a href=""> <i class='bx bxs-credit-card' ></i> Bill </a></li>
-            <li><a href=""> <i class='bx bx-log-out' ></i> Logout </a></li>
+            <li><a class="active" id="profile-link" href="#"> <i class='bx bxs-user-detail' ></i> Profile </a></li>
+            <li><a href="#" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
+            <li><a href="#"> <i class='bx bx-user' ></i> Customer </a></li>
+            <li><a href="#"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
+            <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href="#"> <i class='bx bx-check' ></i> Vote </a></li>
+            <li><a href="#"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
         </ul>
         
     </div>
-    <section></section>
-</body>
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="card_border">
+                    <img src="img/IMG_5824.JPG" alt="" class="card__img">
+                </div>
+                <h3 class="card_name">Admin</h3>
+                <span class="card_role">Manager</span>
+                <div class="card_Contact" id="card_contact" >
+                    <div class="card_Contact-control">
+                        <div class="card-social-toggle" id="card-toggle">
+                            <i class='bx bx-show-alt'></i>
+                        </div>
 
+                        <span class="card_Contact-text">Contact Me :</span>
+
+                        <ul class="card_Contact-list">
+                            <a href="" target="_blank" class="card_Contact-link">
+                                <i class='bx bxl-gmail' ></i>
+                                 : tamdoan13062001@gmail.com
+                            </a>
+                            <a href="" target="_blank" class="card_Contact-link">
+                                <i class='bx bx-phone' ></i>
+                                 : 0906512106
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 <script>
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
     document.getElementById('username').innerHTML = userInfo.username;
     document.getElementById('role').innerHTML = userInfo.role;
 </script>
+<script>
+    document.getElementById("logout-link").addEventListener("click", function () {
+        sessionStorage.clear();
+        window.location.href = "login.html";
+    });
+</script>
+<script>
+    document.getElementById("room-link").addEventListener("click", function () {
+        window.location.href = "roomlist.html";
+    });
+</script>
+<script>
+    document.getElementById("profile-link").addEventListener("click", function () {
+        window.location.href = "admin.html";
+    });
+</script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="js/admin.js"></script>
 

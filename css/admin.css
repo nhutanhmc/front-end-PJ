@@ -3,15 +3,33 @@ body{
 }
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+ul{
     list-style: none;
+}
+
+a{
     text-decoration: none;
 }
+ a.active
+{
+    background-color: #088178;
+    color: #088178;
+}
+
 
 .sidebar{
     position: fixed;
-    left: -250px;
+    left: 0px;
     width: 250px;
     height: 100%;
     background: #042331;
@@ -48,53 +66,6 @@ ul li:hover a{
     margin-right: 16px;
 }
 
-#check{
-    display: none;
-}
-
-label #btn, label #cancel{
-    position: absolute;
-    cursor: pointer;
-    background: #042331;
-    border-radius: 3px;
-}
-
-label #btn{
-    left: 40px;
-    top: 25px;
-    font-size: 35px;
-    color: white;
-    padding: 6px 12px;
-    transition: all 0.5s ;
-}
-
-label #cancel{
-    z-index: 1111;
-    left: -195px;
-    top: 17px;
-    font-size: 30px;
-    color: #0a5275;
-    padding: 4px 9px;
-    transition: all 0.5s ease;
-}
-
-#check:checked ~ .sidebar{
-    left:  0;
-}
-
-#check:checked ~ .label #btn{
-    left: 250px;
-    opacity: 0;
-    pointer-events: none;
-}
-
-#check:checked ~ label #cancel{
-    left: 195px;
-}
-
-#check:checked ~ section{
-    margin-left: 250px;
-}
 
 section{
     background: url('../img/bg.jpg') no-repeat;
@@ -102,4 +73,117 @@ section{
     background-size: cover;
     height: 100vh;
     transition: all 0.5s ;
+}
+
+.container{
+    height: 100%;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.card{
+    position: relative;
+    margin-top: 30px;
+    width: 40%;
+    background-color: rgb(23, 25, 26);
+    padding: 1.25rem 2rem 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+}
+
+
+.card__img{
+    width: 98%;
+    height: 98%;
+    border-radius: 50%;
+}
+
+.card_border{
+    width: 55%;
+    height: 60;
+    border: 3px solid rgb(248, 162, 3);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 0.75rem;
+}
+
+.card_name{
+    color: rgb(248, 162, 3);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card_role{
+    color: #f1f1f1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card_Contact{
+    background-color: rgb(248, 162, 3);
+    padding: 0.75rem; 
+    border-radius: 3rem;
+    text-align: initial;
+    box-shadow: 0 8px 24px rgb(128, 85, 6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    transform-origin: 18px 17px;
+}
+
+.card_Contact-control{
+    position: relative;
+    transform-origin: 18px 17px;
+}
+
+.card-social-toggle{
+    display: inline-block;
+    background-color: rgb(23, 25, 26);
+    color: rgb(248, 162, 3);
+    font-size: 1.25rem;
+    padding: 0.2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.card_Contact-text{
+    display: block;
+    color: rgb(23, 25, 26);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card_Contact-list{
+    display: inline-flex;
+    column-gap: 0.75rem;
+}
+
+.card_Contact-link{
+    display: inline-flex;
+    background-color: rgb(248, 162, 3);
+    color: rgb(23, 25, 26);
+    font-size: 1rem;
+    padding: 7px;
+    transform-origin: 18px 18px;
+}
+
+.card_Contact-text,
+.card_Contact-list{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 2.1rem;
+}
+
+.card_Contact-text{
+    top: 0.2rem;
 }
