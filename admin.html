@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/admin.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -13,11 +14,11 @@
         <ul>
             <li><a class="active" id="profile-link" href="#"> <i class='bx bxs-user-detail' ></i> Profile </a></li>
             <li><a href="#" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
-            <li><a href="#"> <i class='bx bx-user' ></i> Customer </a></li>
+            <li><a href="#" id="customer-link"> <i class='bx bx-user' ></i> Customer </a></li>
             <li><a href="#"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
             <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
             <li><a href="#"> <i class='bx bx-check' ></i> Vote </a></li>
-            <li><a href="#"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
+            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
         </ul>
         
@@ -28,8 +29,10 @@
                 <div class="card_border">
                     <img src="img/IMG_5824.JPG" alt="" class="card__img">
                 </div>
-                <h3 class="card_name">Admin</h3>
+                <h3 class="card_name" id="role">Admin</h3>
                 <span class="card_role">Manager</span>
+                <a class="dialog-btn" href="#my-dialog">View</a>
+                <a class="dialog-btn" href="#my-dialog-edit">Edit</a>
                 <div class="card_Contact" id="card_contact" >
                     <div class="card_Contact-control">
                         <div class="card-social-toggle" id="card-toggle">
@@ -53,12 +56,77 @@
             </div>
         </div>
     </section>
+
+    <div class="dialog overlay" id="my-dialog">
+        <a href="#" class="overlay-close"></a>
+
+        <div class="dialog-body">
+            <a class="dialog-close-btn" href="#">&times;</a>
+            <h3>Thong tin chi tiet</h3>
+            <table class="mytable">
+                <tr class="mytable--row">
+                    <th colspan="4" class="mytable_header">ID user:A01</th>
+                </tr>
+                <tr>
+                    <td rowspan="3"><img src="img/IMG_5824.JPG" alt="" height="300px" width="300px"></td>
+                    <td colspan="2">
+                        User Name:<div id="username-view"></div>
+                    </td>
+                    <td colspan="2">
+                        City:<div id="city"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Name:<div id="name"></div>
+                    </td>
+                    <td colspan="2" >
+                        Phone: <div id="phonenum"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Email:<div id="email"></div>
+                    </td>
+                    <td colspan="2">
+                        Date: <div id="date"></div> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="dialog overlay" id="my-dialog-edit">
+        <a href="#" class="overlay-close"></a>
+
+        <div class="dialog-body">
+            <a class="dialog-close-btn" href="#">&times;</a>
+            <h3>Thong tin chi tiet</h3>
+            <form>
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" name="name-input"><br>
+          
+                <label for="phone-input">Phone:</label>
+                <input type="tel" id="phone-input" name="phone-input"><br>
+          
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" name="email-input"><br>
+
+                <label for="city-input">City:</label>
+                <input type="text" id="city-input" name="city-input"><br>
+          
+                <input type="button" value="Save" onclick="saveData()">
+              </form>
+        </div> 
+    </div>
 </body>
 <script>
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+    // const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
     document.getElementById('username').innerHTML = userInfo.username;
-    document.getElementById('role').innerHTML = userInfo.role;
+    document.getElementById('username-view').innerHTML = userInfo.username;
+    document.getElementById('username-edit').innerHTML = userInfo.username;
 </script>
+
 <script>
     document.getElementById("logout-link").addEventListener("click", function () {
         sessionStorage.clear();
@@ -73,6 +141,16 @@
 <script>
     document.getElementById("profile-link").addEventListener("click", function () {
         window.location.href = "admin.html";
+    });
+</script>
+<script>
+    document.getElementById("customer-link").addEventListener("click", function () {
+        window.location.href = "customer.html";
+    });
+</script>
+<script>
+    document.getElementById("bill-link").addEventListener("click", function () {
+        window.location.href = "bill.html";
     });
 </script>
 

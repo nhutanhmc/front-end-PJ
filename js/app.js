@@ -20,9 +20,7 @@ loginForm.addEventListener('submit', (event) => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
             sessionStorage.setItem('userInfo', JSON.stringify(data));
-            alert("Dang nhap thanh cong");
             window.location.href = 'admin.html';
 
         })

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/roomlist.css">
+    <link rel="stylesheet" href="/css/bill.css">
     <!-- <link rel="stylesheet" href="/css/admin.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -16,12 +16,12 @@
         <header id="username">My Name</header>
         <ul>
             <li><a href="#" id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
-            <li><a class="active" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
+            <li><a href="#" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
             <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
             <li><a href="#"> <i class='bx bx-bookmark'></i> Ticket </a></li>
             <li><a href="#"> <i class='bx bx-user-voice'></i> Service </a></li>
             <li><a href="#"> <i class='bx bx-check'></i> Vote </a></li>
-            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
+            <li><a class="active" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
         </ul>
 
@@ -39,13 +39,8 @@
                         Create
                     </a>
                 </div>
-                <div class="available">
-                    <div>Available</div>
-                    <input type="checkbox">
-                </div>
-                <div class="vip">
-                    <div>Vip</div>
-                    <input type="checkbox">
+                <div class="sort">
+                    <input type="date">
                 </div>
                 <div class="profile">
                     <a href="#"><img src="/img/IMG_5824.JPG" alt=""></a>
@@ -57,58 +52,43 @@
             <table width="100%">
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>IM</td>
-                        <td>Status</td>
-                        <td>Type</td>
-                        <td>Price</td>
+                        <td>NumID</td>
+                        <td>Date</td>
+                        <td>Bill Of Cus</td>
+                        <td>Fee service</td>
+                        <td>Total</td>
+                        <td>Paid</td>
+                        <td>Note</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="ubl">
+                    <tr>
                         <td class="numid">
                             <h5>IDT2010</h5>
                         </td>
 
                         <td class="dateofbill">
-                            <img src="img/mess.jng" alt="">
+                            <h5>02/05/2002</h5>
                         </td>
 
                         <td class="actives">
-                            <a href=""><p>Used</p></a>
+                            <a href=""><p>Eula Lawrence</p></a>
                         </td>
 
                         <td class="role">
                             <a href="">
-                                <p>VIP</p>
+                                <p>20$</p>
                             </a>
                         </td>
 
                         <td class="total">
                             <p>500$</p>
                         </td>
-                    </tr>
-                    <tr class="ubl">
-                        <td class="numid">
-                            <h5>IDT2010</h5>
+                        <td class="checkpaid">
+                            <input type="checkbox">
                         </td>
-
-                        <td class="dateofbill">
-                            <img src="img/mess.jng" alt="">
-                        </td>
-
-                        <td class="actives-n">
-                            <a href=""><p> Available</p></a>
-                        </td>
-
-                        <td class="role">
-                            <a href="">
-                                <p>VIP</p>
-                            </a>
-                        </td>
-
-                        <td class="total">
-                            <p>500$</p>
+                        <td class="note">
+                            <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>
                     </tr>
                 </tbody>

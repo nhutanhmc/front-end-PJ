@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info</title>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <script src="/js/modal.js"></script>
+</head>
+<body>
+    <a href="#dialog">click</a>
+    <div class="dialog-view-edit" id="dialog">
+        <div class="left-pane">
+            <img src="https://picsum.photos/id/237/300/300">
+        </div>
+        <div class="right-pane">
+            <div class="header">
+                <h2>User Info</h2>
+                <button class="close-btn"><a href="#">X</a></button>
+            </div>
+            <div class="form">
+                <div class="form-group">
+                    <label>User:</label>
+                    <div id="user">Xavia</div>
+                </div>
+                <div class="form-group">
+                    <label>Role:</label>
+                    <div id="role">Admin</div>
+                </div>
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <div id="phone">0789524779</div>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <div id="email">nhutanhmc@gmail.com</div>
+                </div>
+                <div class="form-group">
+                    <button class="edit-btn" onclick="editUserInfo()">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

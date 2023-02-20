@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/customer.css">
+    <!-- <link rel="stylesheet" href="/css/admin.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar">
+        <header id="username">My Name</header>
+        <ul>
+            <li><a href="#" id="profile-link" href="#"> <i class='bx bxs-user-detail' ></i> Profile </a></li>
+            <li><a href="#" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
+            <li><a class="active" id="customer-link"> <i class='bx bx-user' ></i> Customer </a></li>
+            <li><a href="#"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
+            <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href="#"> <i class='bx bx-check' ></i> Vote </a></li>
+            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
+        </ul>
+
+    </div>
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search">
+                </div>
+
+                <div class="profile">
+                    <!-- <i class='bx bx-bell'></i> -->
+                    <a href="#"><img src="/img/IMG_5824.JPG" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Title</td>
+                        <td>Status</td>
+                        <td>Role</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="people">
+                            <a href="#"><img src="/img/IMG_5824.JPG" alt=""></a>
+                            <div class="people-de">
+                                <h5>Tam Doan</h5>
+                                <p>tamdoan13062001</p>
+                            </div>
+                        </td>
+
+                        <td class="peopel-des">
+                            <h5>Manager</h5>
+                            <p>chung cu</p>
+                        </td>
+
+                        <td class="actives">
+                            <p>active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Admin</p>
+                        </td>
+
+                        <td class="edit">
+                            <a href="#">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+</body>
+<script>
+    document.getElementById("logout-link").addEventListener("click", function () {
+        sessionStorage.clear();
+        window.location.href = "login.html";
+    });
+</script>
+<script>
+    document.getElementById("room-link").addEventListener("click", function () {
+        window.location.href = "roomlist.html";
+    });
+</script>
+<script>
+    document.getElementById("profile-link").addEventListener("click", function () {
+        window.location.href = "admin.html";
+    });
+</script>
+<script>
+    document.getElementById("customer-link").addEventListener("click", function () {
+        window.location.href = "customer.html";
+    });
+</script>
+<script>
+    document.getElementById("bill-link").addEventListener("click", function () {
+        window.location.href = "bill.html";
+    });
+</script>
+
+</html>
