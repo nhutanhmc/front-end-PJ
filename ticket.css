@@ -1,0 +1,401 @@
+body{
+    font-family: 'roboto',sans-serif;
+    display: flex;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+ a.active
+{
+    background-color: #088178;
+    color: #088178;
+}
+
+.col-lg-8{
+    padding: 0 30px;
+    flex: 0 0 auto;
+    width: 66.67%;
+}
+
+.col-lg-4{
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+
+.sidebar{
+    position: fixed;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all 0.5s ease;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+
+
+#interface{
+    
+    margin-left: 280px;
+    margin-right: 50px;
+    width: 100%;
+    position: relative;
+    line-height: 30px;
+}
+
+#interface .navigation .n1{
+    display: flex;
+    align-items: center;
+}
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+}
+
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#interface .navigation .search i{
+    margin-right: 14px;
+}
+
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+
+#interface .navigation .create button{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #2a94b4;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+#interface .navigation .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+
+
+#interface .navigation .profile i{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .navigation .profile img{
+    
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.board{
+    width: 100%;
+    margin: 30px 0 30px 30px ;
+    overflow: auto;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+
+}
+
+.board .people{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid#eef0f3;
+}
+
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding: 15px;
+}
+
+tbody tr td{
+    padding: 10px 15px;
+}
+
+.actives p{
+    min-width: 35%;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    color: #2b2b2b;
+    border-radius: 40px;
+}
+
+.accept{
+    background: #d7fada;
+    padding: 2px 10px;
+}
+
+.Rejected{
+    background: #e9a14e;
+    padding: 2px 10px;
+}
+
+.edit button{
+    font-size: 14px;
+    border: none;
+    background-color: #594ef7;
+    color: #fff;
+    border-radius: 7px;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.modal-container{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 60%;
+    max-width: calc(100% -32px);
+    min-height: 70%;
+    animation: modalFadeIn ease .4s;
+}
+
+.modal-container .content{
+    margin: -50px 20px 0 20px;
+    width: 100%;
+
+}
+.modal-container input{
+    margin-bottom: 20px; 
+    padding: 20px;  
+    width: 49.5%;
+}
+
+.modal-container input+input{
+    margin-bottom: 20px; 
+    padding: 20px;  
+    width: 50%;
+}
+
+.modal-container input+input+input{   
+    width: 100%;
+}
+
+.modal-container input+input+input+input{   
+    width: 100%;
+    min-height: 30%;
+    height: 200px;
+}
+
+.modal-container .content button{
+    font-size: 14px;
+    border: none;
+    background-color: #2553ec;
+    color: #fff;
+    width: 15%;
+    border-radius: 7px;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-containere {  
+    background-color: #fff;
+    width: 60%;
+    max-width: calc(100% -32px);
+    min-height: 300px;
+    animation: modalFadeIn ease .4s;
+}
+
+.modal-containere .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2a94b4;
+    width: 100%;
+    line-height: 80px;
+    max-height: 80px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.modal-containere .contente {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    font-size: 18px;
+}
+
+.modal-containere .contente p{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 16px;
+}
+
+.modal-containere .btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-containere .btns button{
+    align-items: center;
+    margin: 0 10px;
+    font-size: 14px;    
+    border: none;
+    color: #1d1b1b;
+    border-radius: 7px;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.open{
+    display: flex;
+}
+
+.img-modal{      
+    width: 30%;
+    height: 60%;
+    padding: 20px;
+}
+
+.info-modal{
+    padding: 20px;
+}
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
