@@ -9,7 +9,7 @@ document.getElementById("form-register").addEventListener("submit", function (ev
     // role: role
   };
 
-  fetch("https://test-connect-api.onrender.com/auth/register", {
+  fetch("https://test-connect-api.onrender.com/account/register-staff", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

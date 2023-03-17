@@ -15,14 +15,13 @@
     <div class="sidebar">
         <header id="username">My Name</header>
         <ul>
-            <li><a href="#" id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
-            <li><a class="active" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
-            <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
-            <li><a href="#"> <i class='bx bx-bookmark'></i> Ticket </a></li>
-            <li><a href="#"> <i class='bx bx-user-voice'></i> Service </a></li>
-            <li><a href="#"> <i class='bx bx-check'></i> Vote </a></li>
-            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
-            <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
+            <li><a  id="profile-link" href="#"> <i class='bx bxs-user-detail' ></i> Profile </a></li>
+            <li><a href="#" class="active" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
+            <li><a href="#" id="customer-link"> <i class='bx bx-user' ></i> Customer </a></li>
+            <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
+            <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
         </ul>
 
     </div>
@@ -117,31 +116,7 @@
 
     </section>
 </body>
-    <script>
-        document.getElementById("logout-link").addEventListener("click", function () {
-            sessionStorage.clear();
-            window.location.href = "login.html";
-        });
-    </script>
-    <script>
-        document.getElementById("room-link").addEventListener("click", function () {
-            window.location.href = "roomlist.html";
-        });
-    </script>
-    <script>
-        document.getElementById("profile-link").addEventListener("click", function () {
-            window.location.href = "admin.html";
-        });
-    </script>
-    <script>
-        document.getElementById("customer-link").addEventListener("click", function () {
-            window.location.href = "customer.html";
-        });
-    </script>
-    <script>
-        document.getElementById("bill-link").addEventListener("click", function () {
-            window.location.href = "bill.html";
-        });
-    </script>
+<script src="/js/include.js"></script>
+
         
     </html>

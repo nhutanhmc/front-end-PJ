@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/css/forum.css">
+    <link rel="stylesheet" href="/css//forum/forum.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -17,12 +17,10 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
-                    <li><a href="ticket-custom.html" id="ticket-custom-link">Ticket</a></li>
-                    <li><a href="#" id="room-custom-link">Room</a></li>
-                    <li><a href="forum.html" id="forum-custom-link">Forum</a></li>
-                    <li><a href="#" id="service-custom-link">Services</a></li>
-                    <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
+                    <li><a href="/profile.html">Profile</a></li>
+                    <li><a href="/room.html">Room</a></li>
+                    <li><a href="/forum/forum.html">Forum</a></li>
+                    <li><a href="/customer_services.html">Services</a></li>
                 </ul>
             </div>
         </div>
@@ -78,9 +76,9 @@
                                 <thead style="background-color: #f7f8f9">
                                     <tr>
                                         <td class="forum">Forum</td>
-                                        <td style="text-align: center;">Topics</td>
-
-
+                                        <td>Topics</td>
+                                        <td>Replies</td>
+                                        <td class="last">Last Post</td>
                                     </tr>
                                 </thead>
                                 <tbody style="background-color: #fff; ">
@@ -101,8 +99,29 @@
 
                                         </td>
                                         <td class="forum-topic-count">3</td>
-
-
+                                        <td class="forum-reply-count">1</td>
+                                        <td class="forum-freshness">
+                                            <div class="freshness-box">
+                                                <div class="freshness-top">
+                                                    <div class="freshness-link">
+                                                        <a href="https://wordpress-theme.spider-themes.net/docly/forums/topic/scheduled-downtime-this-fall/"
+                                                            title="Scheduled downtime this fall">2 years, 6 months
+                                                            ago</a>
+                                                    </div>
+                                                </div>
+                                                <div class="freshness-btm">
+                                                    <a href="#" title="View Eh Jewel's profile"
+                                                        class="bbp-author-link"><span class="bbp-author-name">Eh
+                                                            Jewel</span></a> <a href="#" title="View Eh Jewel's profile"
+                                                        class="bbp-author-link"><span class="bbp-author-avatar">
+                                                            <img alt=""
+                                                                src="https://secure.gravatar.com/avatar/29bcdc9972fc678d8c132abc15cce0a8?s=45&amp;d=mm&amp;r=g"
+                                                                srcset="https://secure.gravatar.com/avatar/29bcdc9972fc678d8c132abc15cce0a8?s=90&amp;d=mm&amp;r=g 2x"
+                                                                class="avatar avatar-45 photo" height="45" width="45"
+                                                                loading="lazy"></span></a>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
 
                                     <tr style="border-bottom: 1px solid #f7f8f9;">
@@ -122,8 +141,30 @@
 
                                         </td>
                                         <td class="forum-topic-count">3</td>
-
-
+                                        <td class="forum-reply-count">1</td>
+                                        <td class="forum-freshness">
+                                            <div class="freshness-box">
+                                                <div class="freshness-top">
+                                                    <div class="freshness-link">
+                                                        <a href="https://wordpress-theme.spider-themes.net/docly/forums/topic/scheduled-downtime-this-fall/"
+                                                            title="Scheduled downtime this fall">2 years, 6 months
+                                                            ago</a>
+                                                    </div>
+                                                </div>
+                                                <div class="freshness-btm">
+                                                    <a href="#" title="View Eh Jewel's profile"
+                                                        class="bbp-author-link"><span class="bbp-author-name">Dylan
+                                                            Meringue</span></a> <a href="#"
+                                                        title="View Eh Jewel's profile" class="bbp-author-link"><span
+                                                            class="bbp-author-avatar">
+                                                            <img alt=""
+                                                                src="https://secure.gravatar.com/avatar/300b63121000b0edc7e8bc62fbc6ae09?s=45&amp;d=mm&amp;r=g"
+                                                                srcset="https://secure.gravatar.com/avatar/300b63121000b0edc7e8bc62fbc6ae09?s=90&amp;d=mm&amp;r=g 2x"
+                                                                class="avatar avatar-45 photo" height="45" width="45"
+                                                                loading="lazy"></span></a>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -184,7 +225,7 @@
 
                         <div class="input-group">
                             <label for="post-editor">Body</label>
-                            <textarea name="body" id="post-editor"  rows="8" class="input-control"></textarea>
+                            <textarea name="body" id="post-editor" cols="6" rows="8" class="input-control"></textarea>
                         </div>
 
 
@@ -252,7 +293,6 @@
             event.stopPropagation()
         })
     </script>
-    <script src="jsCustomer/scrip-link-cus.js"></script>
 </body>
 
 </html>

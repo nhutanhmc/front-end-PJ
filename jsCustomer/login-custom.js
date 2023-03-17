@@ -20,9 +20,8 @@ loginForm.addEventListener('submit', (event) => {
             return response.json();
         })
         .then(data => {
-            sessionStorage.setItem('userInfo', JSON.stringify(data));
-            window.location.href = 'admin.html';
-
+            sessionStorage.setItem('userInfo-cus', JSON.stringify(data));
+            window.location.href = 'homepage.html';
         })
         .catch(error => {
             console.error(error);

@@ -33,19 +33,6 @@ function editUserInfo() {
 }
 
 function saveUserInfo() {
-    var user = document.getElementById("user");
-    var role = document.getElementById("role");
-    var phone = document.getElementById("phone");
-    var email = document.getElementById("email");
-    var editBtn = document.querySelector(".edit-btn");
-
-    // Lưu giá trị mới vào các phần tử HTML tương ứng
-    user.innerHTML = user.querySelector("input").value;   role.innerHTML = role.querySelector("input").value;
-    phone.innerHTML = phone.querySelector("input").value;
-    email.innerHTML = email.querySelector("input").value;
-
-    editBtn.style.display = "inline-block";
-
     // Xóa nút Save và Cancel
     var saveBtn = document.querySelector(".save-btn");
     saveBtn.parentNode.removeChild(saveBtn);

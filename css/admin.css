@@ -1,42 +1,46 @@
-body{
-    font-family: 'roboto',sans-serif;
+body {
+    font-family: 'roboto', sans-serif;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
- a.active
-{
+
+a.active {
     background-color: #088178;
     color: #088178;
 }
 
 
-.sidebar{
+.sidebar {
     position: fixed;
     left: 0px;
     width: 250px;
     height: 100%;
     background: #042331;
     transition: all 0.5s ease;
+    z-index: 1;
 }
 
-.sidebar header{
+.sidebar header {
     font-size: 22px;
     color: white;
     text-align: center;
@@ -45,7 +49,7 @@ a{
     user-select: none;
 }
 
-.sidebar ul a{
+.sidebar ul a {
     display: block;
     height: 100%;
     width: 100%;
@@ -58,149 +62,183 @@ a{
     border-bottom: 1px solid black;
 }
 
-ul li:hover a{
+ul li:hover a {
     padding-left: 50px;
 }
 
-.sidebar ul a i{
+.sidebar ul a i {
     margin-right: 16px;
 }
 
 
-section{
-    background: url('../img/bg.jpg') no-repeat;
+section {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    transition: all 0.5s ;
+    transition: all 0.5s;
 }
 
-.container{
-    height: 100%;
-    margin-inline: 1.5rem;
-    display: grid;
-    place-items: center;
+.container {
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
 }
 
-.card{
-    position: relative;
-    margin-top: 30px;
-    width: 40%;
-    background-color: rgb(23, 25, 26);
-    padding: 1.25rem 2rem 3rem;
-    border-radius: 1.5rem;
+.card {
+    display: flex;
+    padding: 20px;
+    padding-top: 90px;
+    height: 800px;
+    width: 100%;
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-70 {
+    width: 70%;
+}
+
+.card_border {
+    background: linear-gradient(to right, #ee5a6f, #f29263);
+    display: flex;
+    flex-direction: column;
+
+    border-top-left-radius:6px ;
+    border-bottom-left-radius:6px ;
+}
+
+.card_border .img-info{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
-}
+    margin-bottom: -30px;
+    
+} 
 
-
-.card__img{
-    width: 98%;
-    height: 98%;
+.card_border img {
+    width: 340px;
+    height: 340px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
+    box-shadow: -1px 2px 20px 5px rgb(168 162 162 / 94%);
+    -webkit-box-shadow: -1px 2px 20px 5px rgb(168 162 162 / 94%);
+    -moz-box-shadow: -1px 2px 20px 5px rgba(168, 162, 162, 0.94);
 }
 
-.card_border{
-    width: 55%;
-    height: 60;
-    border: 3px solid rgb(248, 162, 3);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 0.75rem;
+.card_border .name-role{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
-.card_name{
-    color: rgb(248, 162, 3);
-    font-size: 30px;
-    font-weight: 500;
+.card_border .name-role h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
 }
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 40px 40px 40px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius:6px ;
+    box-shadow: -1px 2px 20px 5px rgba(168, 162, 162, 0.94);
+    -webkit-box-shadow: -1px 2px 20px 5px rgba(168, 162, 162, 0.94);
+    -moz-box-shadow: -1px 2px 20px 5px rgba(168, 162, 162, 0.94);
+}
+
 
 .card_role{
-    color: #f1f1f1;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.show-more{
+    display: flex;
+    flex-direction: column;   
+    width: 100%;
+}
+
+.show-more .name-contact{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 55px;
+}
+
+.show-more .other-contact{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.show-more p{
+    padding-top: 10px  ;
+    text-transform: uppercase;
     font-size: 18px;
-    font-weight: 500;
+    border-bottom: 1px solid #ccc;
 }
 
-.card_Contact{
-    background-color: rgb(248, 162, 3);
-    padding: 0.75rem; 
-    border-radius: 3rem;
-    text-align: initial;
-    box-shadow: 0 8px 24px rgb(128, 85, 6);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1.75rem;
-    margin: 0 auto;
-    overflow: hidden;
-    transform-origin: 18px 17px;
+.show-more h2{
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 18px;    
 }
 
-.card_Contact-control{
-    position: relative;
-    transform-origin: 18px 17px;
-}
-
-.card-social-toggle{
-    display: inline-block;
-    background-color: rgb(23, 25, 26);
-    color: rgb(248, 162, 3);
-    font-size: 1.25rem;
-    padding: 0.2rem;
-    border-radius: 100%;
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-}
-
-.card_Contact-text{
-    display: block;
-    color: rgb(23, 25, 26);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.card_Contact-list{
-    display: inline-flex;
-    column-gap: 0.75rem;
+.show-more select{
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 6px;
+    text-transform: uppercase;
 }
 
 .card_Contact-link{
-    display: inline-flex;
-    background-color: rgb(248, 162, 3);
-    color: rgb(23, 25, 26);
-    font-size: 1rem;
-    padding: 7px;
-    transform-origin: 18px 18px;
+    color: #141414;
 }
 
-.card_Contact-text,
-.card_Contact-list{
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-left: 2.1rem;
+.dialog-btn{
+    text-align: center;
+    margin-top: 60px;
+    padding: 10px;
+    background: #141414;
+    color: #fff;
+    border-radius: 6px;
 }
 
-.card_Contact-text{
-    top: 0.2rem;
+.dialog-btn:hover{
+    background: #088178;
+    color: #fff;
 }
+
 /* test edit */
 .dialog {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
-    z-index: 10;
-    display: flex;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity linear 0.2s;
 }
 
 .overlay-close {
@@ -221,11 +259,21 @@ section{
 }
 
 .dialog-body {
-    max-width: 800px;
-    max-height: 800px;
-    position: relative;
-    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #fff;
+    width: 70%;
+    max-width: calc(100% -32px);
+    height: auto;
+    min-height: 300px;
+    animation: modalFadeIn ease .4s;
+    border-radius: 6px;
+    position: relative;
+    margin-left: 10%;
+}
+
+.open{
+    display: flex;
 }
 
 .dialog-close-btn {
@@ -234,31 +282,66 @@ section{
     right: 6px;
     text-decoration: none;
     color: #333;
+    padding: 10px;
+}
+.dialog-body .header{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2a94b4;
+    width: 100%;
+    line-height: 80px;
+    max-height: 80px;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
-.mytable {
-    border: 10px solid rgb(255, 255, 255);width:100%;
-    text-align: center;
-}
-.mytable th { 
-    padding: 15px;
-    text-align: center;
-    padding-bottom: 0px
-}
-.mytable td { 
-    padding: 20px;
-    text-align: center;
+.dialog-body .edit-info{
+    margin: 80px 0 0 0;
+    padding: 100px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
-.mytable .mytable_header{
-    text-align: center;
+.dialog-body input{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
 }
 
-.mytable--row{
-    
-    width: 200px;
+.dialog-body .btn-button{
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
 }
 
+
+.dialog-body .btn-button:hover{
+    cursor: pointer;
+    background: #088178;
+    color: #fff;
+}
+
+.view-ds{
+    display: flex;
+}
+.show-more h3{
+    padding: 10px ;
+}
 /* .dialog-view-edit {
     width: 1000px;
     height: 700px;
@@ -366,3 +449,9 @@ section{
     background-color: #008000;
     color: #ffffff;
 } */
+
+.chooseFileImg{
+    margin-left: 169px;
+    margin-bottom: 57px;
+    margin-top: -5px;
+}

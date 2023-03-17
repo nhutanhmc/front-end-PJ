@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/cssCustomer/profile.css" />
+  <title>HomePage</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="logo">
+        <a href="homepage.html" id="homepage-cus-link">Your Logo</a>
+      </div>
+      <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+          <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
+          <li><a href="ticket-custom.html" id="ticket-custom-link" >Ticket</a></li>
+          <li><a href="room-cus.html" id="room-custom-link" >Room</a></li>
+          <li><a href="forum.html" id="forum-custom-link" >Forum</a></li>
+          <li><a href="customer_services.html" id="service-custom-link" >Services</a></li>
+          <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="profilebody">
+    <div class="container">
+        <div class="card">
+            <div class="card_border col-30">
+                <div class="img-info" >
+                    <img src="" alt="" class="card__img" id="img-info">
+                </div>    
+                <div class="image-wrapper">
+                    <input type="file" class=" hide image-input chooseFileImg" name="" id="imageFile" accept="image/png, image/jpg, image/jpeg">
+                    <button type="button" class="image-btn bg-image">
+                        <span>
+                            <i class='bx bx-image-alt' class="image-btn image-outline"></i>
+                            <span>Choose Image</span>
+                        </span>
+                    </button>
+                </div>              
+
+                <div class="name-role">
+                    <h3 class="card_name">role</h3>
+                    <h3 class="card_role" id="role">Manager</h3>
+                </div>
+            </div>
+
+            <div class="info col-70">
+                <div class="show-more">
+                    <p>Infomation</p>
+                    <div class="name-contact">
+                        <div class="namee">
+                            <div class="view-ds">
+                                <h2>username : <h3 id="username-view"></h3>
+                                </h2>
+                            </div>
+                            <div class="view-ds">
+                                <h2>Name : </h2>
+                                <h3 id="name"></h3>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="view-ds">
+                                <h2>Phone : </h2>
+                                <h3 id="phonenum"></h3>
+                            </div>
+                            <div class="view-ds">
+                                <h2>Email : </h2>
+                                <h3 id="email"></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>Contact</p>
+                    <div class="other-contact">
+                        <div class="other1">
+                            <div class="view-ds">
+                                <h2>Date : </h2>
+                                <h3 id="date"></h3>
+                            </div>
+                            <div class="view-ds">
+                                <h2>city : </h2>
+                                <h3 id="city"></h3>
+                            </div>
+                            <div class="view-ds">
+                                <h2>District : </h2>
+                                <h3 id="district"></h3>
+                            </div>
+                        </div>
+
+                        <div class="other2">
+                            <div class="view-ds">
+                                <h2>ward : </h2>
+                                <h3 id="street"></h3>
+                            </div>
+                            <div class="view-ds">
+                                <h2>street : </h2>
+                                <h3 id="ward"></h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <a class="dialog-btn js-edit" href="#my-dialog-edit">Edit</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="dialog overlay" id="my-dialog-edit">
+    <div class="dialog-body">
+      <div class="header">
+        <h3>Thong tin chi tiet</h3>
+      </div>
+      <div class="edit-info">
+        <form>
+          <label for="name-input">Name:</label>
+          <input type="text" id="name-input" name="name-input" value=""><br>
+  
+          <label for="phone-input">Phone:</label>
+          <input type="tel" id="phone-input" name="phone-input" value=""><br>
+  
+          <label for="email-input">Email:</label>
+          <input type="email" id="email-input" name="email-input" value=""><br>
+  
+          <label for="city-input">City:</label>
+          <input type="text" id="city-input" name="city-input" value=""><br>
+  
+          <label for="district-input">District:</label>
+          <input type="text" id="district-input" name="district-input" value=""><br>
+  
+          <label for="ward-input">Ward:</label>
+          <input type="text" id="ward-input" name="ward-input" value=""><br>
+  
+          <label for="street-input">Street:</label>
+          <input type="text" id="street-input" name="street-input" value=""><br>
+  
+          <button class="btn-button" type="button" onclick="saveData()">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="col">
+      <img class="logo" src="/img/logo.png" alt="">
+      <h4>Contact</h4>
+      <p><strong>Address: </strong> 150/3c Man Thien, HCM City</p>
+      <p><strong>Phone: </strong> 0906512106</p>
+      <p><strong>Hours: </strong>07:00 - 22:00 Mon-Sat</p>
+      <div class="follow">
+        <h4>Follow Up</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Goole Play</p>
+      <div class="row">
+        <img src="/img/app.jpg" alt="">
+        <img src="/img/play.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="/img/pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+      <p>TamDXT13062001</p>
+    </div>
+  </footer>
+  
+  
+    <script>
+        const edits = document.querySelectorAll('.js-edit')
+        const modal = document.querySelector('.dialog')
+        const modalContainer = document.querySelector('.dialog-body')
+    
+        function showinfo() {
+            modal.classList.add('open')
+        }
+    
+        function hiddeninfo() {
+            modal.classList.remove('open')
+        }
+    
+        for (const edit of edits) {
+            edit.addEventListener('click', showinfo)
+        }
+    
+        modal.addEventListener('click', hiddeninfo)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+<script>
+    const imgbtn = document.querySelector('.image-btn');
+    const imginput = document.querySelector('.image-input');
+
+    imgbtn.addEventListener('click', function () {
+        imginput.click();
+    })
+
+</script>
+<script src="jsCustomer/scrip-link-cus.js"></script>
+<script src="jsCustomer/profile-custome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../P1"
+		},
+		{
+			"path": "../P3"
+		},
+		{
+			"path": "../../proflie"
+		},
+		{
+			"path": "../../customer"
+		},
+		{
+			"path": "../../../Documents/Nicepage Templates/Site1"
+		},
+		{
+			"path": "../../../Documents/Nicepage Templates/Site2"
+		},
+		{
+			"path": "../../Paging-master"
+		},
+		{
+			"path": "../../../../Downloads/forum2"
+		},
+		{
+			"path": "../../tickert"
+		},
+		{
+			"path": "../../quametmoiroi"
+		},
+		{
+			"path": "../../navbarcus-main"
+		},
+		{
+			"path": "../../vanillajs-pagination-master"
+		},
+		{
+			"path": "../hmm"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "P2"
+	}
+}

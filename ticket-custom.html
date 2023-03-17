@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/cssCustomer/ticket-custom.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="homepage.html" id="profile-custom-link">Your Logo</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                  <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
+                  <li><a href="ticket-custom.html" id="ticket-custom-link" >Ticket</a></li>
+                  <li><a href="room-cus.html" id="room-custom-link" >Room</a></li>
+                  <li><a href="forum.html" id="forum-custom-link" >Forum</a></li>
+                  <li><a href="customer_services.html" id="service-custom-link" >Services</a></li>
+                  <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div style="height: 1000px">
+
+        <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div class="search">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+
+                    <div class="create js-create">
+                        <button>Create New Ticket <i class='bx bx-plus'></i></button>
+                    </div>
+
+                    <div class="statuss">
+                        <p>Status:</p>
+                        <select name="filterStatus" id="filterStatus" class="filterStatus">
+                            <option value="All">All</option>
+                            <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
+                            <option value="Đã tiếp nhận">Đã tiếp nhận</option>
+                            <option value="Đơn bị từ chối">Đơn bị từ chối</option>
+                            <option value="Hủy bỏ">Hủy bỏ</option>
+                            <option value="Đang xử lí">Đang xử lí</option>
+                            <option value="Đã được xử lí">Đã được xử lí</option>
+                            <option value="Xử lí thất bại">Xử lí thất bại</option>
+                        </select>
+                    </div>
+                    <div class="statuss">
+                        <p>Type: </p>
+                        <select name="filterType" id="filterType" class="filterStatus-type">
+                            <option value="All">All</option>
+                            <option value="vệ sinh">Vệ sinh</option>
+                            <option value="an ninh">An ninh</option>
+                        </select>
+                    </div>
+
+                    <div class="profile">
+                        <i class='bx bx-bell'></i>
+                        <img src="/img/IMG_5824.JPG" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="board">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Title</td>
+                            <td>Type</td>
+                            <td>Status</td>
+                            <td>Infor</td>
+
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <div class="pagination__buttons"></div>
+            </div>
+
+
+
+            <div id="dialog" class="hide">
+                <div class="content">
+                    <div class="header">
+                        <h2>Thông tin ticket</h2>
+                        <button id="close-dialog" class="js-close-dialog">X</button>
+                    </div>
+                    <div class="tbody">
+                        <p>Your content: <span id="content"></span></p>
+                        <!-- <img src="img/IMG_5824.JPG" alt="" height="200px" width="200px"> -->
+                        <p>Feedback: <span id="feedback"></span></p>
+                        <span id="name"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="contact-info col-50">
+                    <div><i class='bx bx-map'></i>Address,City,Country</div>
+                    <div><i class='bx bx-envelope'></i>contact@email.com</div>
+                    <div><i class='bx bx-phone'></i>+84 906512106</div>
+                    <div><i class='bx bx-time'></i>Mon - sun 8:00 AM to 5:00PM</div>
+                </div>
+
+                <div class="contact-form col-50">
+                    <h2>Ticket</h2>
+                    <form action="" class="send-ticket-customer">
+                        <input type="text" name="title" class="text-box" placeholder="Title" required>
+                        <input type="text" name="type" class="text-box" placeholder="Type" required>
+                        <textarea name="content" rows="5" placeholder="Content" required></textarea>
+                        <div>
+                            <div>Chọn ảnh(tối đa 3 ảnh)</div>
+                            <input type="file" class="chooseFileImg" name="" id="imageFile"
+                                accept="image/png, image/jpg, image/jpeg" multiple>
+                        </div>
+                        <input type="submit" name="submit" class="send-btn" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="col">
+            <img class="logo" src="logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 150/3c Man Thien, HCM City</p>
+            <p><strong>Phone: </strong> 0906512106</p>
+            <p><strong>Hours: </strong>07:00 - 22:00 Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Up</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Goole Play</p>
+            <div class="row">
+                <img src="/img/app.jpg" alt="">
+                <img src="/img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="/img/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>TamDXT13062001</p>
+        </div>
+    </footer>
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+    <script>
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const creates = document.querySelectorAll('.js-create')
+
+        function showinfo() {
+            modal.classList.add('open')
+        }
+
+        function hiddeninfo() {
+            modal.classList.remove('open')
+        }
+
+
+
+        for (const create of creates) {
+            create.addEventListener('click', showinfo)
+        }
+
+        modal.addEventListener('click', hiddeninfo)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+
+    <script>
+        const edits = document.querySelectorAll('.js-edit')
+        const modal2 = document.querySelector('.js-emodal')
+        const modalcontainer2 = document.querySelector('.js-emodal-container')
+
+        function showdetail() {
+            modal2.classList.add('open')
+        }
+
+        function hiddedetail() {
+            modal2.classList.remove('open')
+        }
+
+        for (const edit of edits) {
+            edit.addEventListener('click', showdetail)
+        }
+        modal2.addEventListener('click', hiddedetail)
+        modalcontainer2.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+    <script src="/jsCustomer/ticket-custom.js"></script>
+    <script src="jsCustomer/scrip-link-cus.js"></script>
+</body>
+
+</html>
