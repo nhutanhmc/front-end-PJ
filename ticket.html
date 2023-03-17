@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/ticket.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>My Name</header>
+        <ul>
+            <li><a id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
+            <li><a href="#" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
+            <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
+            <li><a href="#" class="active" id="ticket-link"> <i class='bx bx-bookmark'></i> Ticket </a></li>
+            <li><a href="#"> <i class='bx bx-user-voice'></i> Service </a></li>
+            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
+        </ul>
+
+    </div>
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search">
+                </div>
+
+                <div class="statuss">
+                    <p>Status:</p>
+                    <select name="filterStatus" id="filterStatus" class="filterStatus">
+                        <option value="All">All</option>
+                        <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
+                        <option value="Đã tiếp nhận">Đã tiếp nhận</option>
+                        <option value="Đơn bị từ chối">Đơn bị từ chối</option>
+                        <option value="Hủy bỏ">Hủy bỏ</option>
+                        <option value="Đang xử lí">Đang xử lí</option>
+                        <option value="Đã được xử lí">Đã được xử lí</option>
+                    </select>
+                </div>
+                <div class="statuss">
+                    <p>Type: </p>
+                    <select name="filterType" id="filterType" class="filterStatus-type">
+                        <option value="All">All</option>
+                        <option value="vệ sinh">Vệ sinh</option>
+                        <option value="an ninh">An ninh</option>
+                    </select>
+                </div>
+
+                <div class="profile">
+                    <i class='bx bx-bell'></i>
+                    <img src="/img/IMG_5824.JPG" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%" id="accountTable">
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>type</td>
+                        <td>status</td>
+                        <td>Send FeedBack</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="pagination">
+            <div class="pagination__buttons"></div>
+        </div>
+    </section>
+
+    <div id="dialog-overlay">
+        <div id="dialog-box">
+            <div id="dialog-header">
+                <h2>Customer Details</h2>
+                <button id="dialog-close">&times;</button>
+            </div>
+            <div id="dialog-content">
+                <div>Customer content:</div>
+                <div id="image-list"></div>
+                <div>Your feedback</div>
+                <div>Feedback: </div>
+                <div contenteditable="true" id="feedback-box"></div>
+                <select name="filterTypeOfStaff" id="filterTypeOfStaff">
+                    <option value=""></option>
+                    <option value="Vệ sinh">Vệ sinh</option>
+                    <option value="An ninh">An ninh</option>
+                    <option value="Nội thất">Nội thất</option>
+                </select>
+                <select name="filterStaff" id="filterStaff" class="filterStaff">
+                </select>
+                <div id="dialog-buttons">
+                    <button id="accept-button">Accept</button>
+                    <button id="deny-button">Deny</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="/js/include.js"></script>
+    <script src="js/tiket.js"></script>
+</body>
+
+</html>

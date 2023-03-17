@@ -13,11 +13,7 @@
         <header id="username">Name</header>
         <ul>
             <li><a class="active" id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
-            <li><a href="#" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
-            <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
             <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark'></i> Ticket </a></li>
-            <li><a href="#"> <i class='bx bx-user-voice'></i> Service </a></li>
-            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
         </ul>
 
@@ -141,7 +137,7 @@
 
 </body>
 <script>
-    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+    const userInfo = JSON.parse(sessionStorage.getItem('staffInfor'));
     // const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
     document.getElementById('username').innerHTML = userInfo.username;
     document.getElementById('role').innerHTML = userInfo.role;
@@ -174,7 +170,7 @@
 </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="js/admin.js"></script>
-<script src="js/include.js"></script>
+<script src="jsStaff/profile-staff.js"></script>
+<script src="jsStaff/staff-link.js"></script>
 
 </html>

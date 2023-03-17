@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/ticket.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>My Name</header>
+        <ul>
+            <li><a id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
+            <li><a href="#" class="active" id="ticket-link"> <i class='bx bx-bookmark'></i> Ticket </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
+        </ul>
+
+    </div>
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search">
+                </div>
+
+
+                <div class="profile">
+                    <i class='bx bx-bell'></i>
+                    <img src="/img/IMG_5824.JPG" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%" id="accountTable">
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>type</td>
+                        <td>status</td>
+                        <td>Send FeedBack</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="pagination">
+            <div class="pagination__buttons"></div>
+        </div>
+    </section>
+
+    <div id="dialog-overlay">
+        <div id="dialog-box">
+            <div id="dialog-header">
+                <h2>Customer Details</h2>
+                <button id="dialog-close">&times;</button>
+            </div>
+            <div id="dialog-content">
+                <div>Customer content:</div>
+                <div></div>
+                <div id="image-list"></div>
+                <div id="dialog-buttons">
+                    <button id="accept-button">Accept</button>
+                    <button id="deny-button">Deny</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/jsStaff/ticket-staff.js"></script>
+    <script src="jsStaff/staff-link.js"></script>
+</body>
+
+</html>

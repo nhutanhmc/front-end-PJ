@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/cssCustomer/question.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="homepage.html">Your Logo</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                  <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
+                  <li><a href="ticket-custom.html" id="ticket-custom-link" >Ticket</a></li>
+                  <li><a href="room-cus.html" id="room-custom-link" >Room</a></li>
+                  <li><a href="forum.html" id="forum-custom-link" >Forum</a></li>
+                  <li><a href="customer_services.html" id="service-custom-link" >Services</a></li>
+                  <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <div class="body-forum">
+        <div class="breadcrumb_area">
+            <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/v.svg"
+                class="p_absolute bl_left" alt="leaf">
+            <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/home_one/b_leaf.svg"
+                class="p_absolute bl_right" alt="leaf">
+            <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/home_one/banner_bg.png"
+                class="p_absolute star" alt="leaf">
+            <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/home_one/b_man_two.png"
+                class="p_absolute one wow fadeInRight" alt="Man illustration">
+            <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/home_one/flower.png"
+                class="p_absolute two wow fadeInUp" alt="Flower illustration">
+            <div class="form">
+                <input type="text" placeholder="Your search" class="form-control" />
+                <button class="normal">Search</button>
+            </div>
+
+
+        </div>
+        <div class="control-tab">
+            <a href="/forum/forum.html">Forum <i class='bx bx-chevron-right'></i>
+                <a href="/forum/showforum.html">Announcement <i class='bx bx-chevron-right'></i>
+                    <a href="/forum/question.html">Question</a>
+                </a>
+            </a>
+        </div>
+        <div class="sec_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="answer-action shadow">
+                            <div class="answer-content">
+                                <div class="image-wrap">
+                                    <img src="https://wordpress-theme.spider-themes.net/docly/wp-content/themes/docly/assets/img/forum/answer.png"
+                                        alt="Can’t find an answer?">
+                                </div>
+                                <div class="content">
+                                    <h2 class="ans-title">Can’t find an answer?</h2>
+                                    <p>Make use of a qualified tutor to get the answer</p>
+                                </div>
+                            </div>
+
+                            <div class="action-button-container">
+                                <a href="#" class="action_btn btn-ans js-ask">
+                                    Ask a Question </a>
+                            </div>
+                        </div>
+
+
+                        <div class="question">
+                            <div class="top">
+                                <div class="author">
+                                     <!-- author_id.imgURL ở đây  -->
+                                    <img alt="" src="" class="avatar avatar-50 photo" height="50" width="50" loading="lazy">
+                                </div>
+                                <div class="forum-author">
+                                    <div class="author-name">author_id.name ở đây</div>
+                                    <div class="forum-author-meta">
+                                        <div class="author-badge">
+                                            createdAt ở đây
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q-title">
+                                <span class="question-icon" title="question">Q:</span>
+                                <h1>title ở đây</h1>
+                            </div>
+                            <div class="forum-post-content">
+                                <div class="content">
+                                    content ở đây
+                                </div>
+                            </div>
+                            <div class="img-post-ques" id="img-post-ques">
+                                <table>
+                                  <thead></thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            <div class="input-box">
+                                <p>Comment:</p>
+                                <textarea rows="2"></textarea>
+                            </div>
+                            <button class="send-cmt">Send</button>
+                            <div id="cmt-post-ques">
+                                <table>
+                                  <tbody>
+                                    <!-- Các bình luận sẽ được thêm vào đây -->
+                                  </tbody>
+                                </table>
+                              </div>                           
+                        </div>
+
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="forum-sidebar">
+                            <div id="doclycore_wpwidgets_forums_widget-3" class="widget sidebar_widget ticket_widget">
+                                <div class="yourposst-forum">
+                                    <h3 class="c_head">Your post</h3>
+                                    <h4 class="c_head">Comments</h4>
+                                </div>
+                                
+                                <ul class="list-unstyled ticket_categories">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="page-content">
+                <div class="admin-content">
+
+                    <form action="" method="post" class="admin-form " enctype="multipart/form-data">
+                        <h1 class="form-title">Create Post</h1>
+
+                        <div class="input-group">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" class="input-control">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="post-editor">Body</label>
+                            <textarea name="body" id="post-editor" cols="6" rows="8" class="input-control"></textarea>
+                        </div>
+
+
+                        <div class="post-details">
+                            <div class="select-topic-wrapper">
+                                <div class="input-group">
+                                    <label for="topic">Topic</label>
+                                    <select name="topic_id" id="topic" class="input-control">
+                                        <option></option>
+                                        <option value="Business">Business</option>
+                                        <option value="Life Lessons">Life Lessons</option>
+                                        <option value="Journaling">Journaling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <input type="file" name="" id="" class="hide image-input">
+                                <button type="button" class="image-btn bg-image">
+                                    <span>
+                                        <i class='bx bx-image-alt' class="image-btn image-outline"></i>
+                                        <span>Choose Image</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <button class="confirm">Confirm</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const imgbtn = document.querySelector('.image-btn');
+        const imginput = document.querySelector('.image-input');
+
+        imgbtn.addEventListener('click', function () {
+            imginput.click();
+        })
+
+    </script>
+
+    <script>
+        const asks = document.querySelectorAll('.js-ask')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function showinfo() {
+            modal.classList.add('open')
+        }
+
+        function hiddeninfo() {
+            modal.classList.remove('open')
+        }
+
+        for (const ask of asks) {
+            ask.addEventListener('click', showinfo)
+        }
+
+        modal.addEventListener('click', hiddeninfo)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+    <script src="jsCustomer/scrip-link-cus.js"></script>
+    <script src="jsCustomer/question.js"></script>
+</body>
+
+</html>

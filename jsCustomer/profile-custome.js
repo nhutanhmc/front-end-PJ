@@ -1,6 +1,6 @@
 /*--------------------------------VIEW------------------------------*/
 
-const userInforViewProfile = JSON.parse(sessionStorage.getItem('userInfo'));
+const userInforViewProfile = JSON.parse(sessionStorage.getItem('userInfo-cus'));
 const token = userInforViewProfile.accessToken;
 const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
 
@@ -87,88 +87,53 @@ imageInput.addEventListener("change", () => {
     });
 });
 
-
-
 /*--------------------------------EDIT------------------------------*/
 function saveData() {
-  // Lấy dữ liệu từ các ô input
-  var nameinput = document.getElementById("name-input").value;
+    // Lấy dữ liệu từ các ô input
+    var nameinput = document.getElementById("name-input").value;
+    var phoneinput = document.getElementById("phone-input").value;
+    var emailinput = document.getElementById("email-input").value;
+    var cityinput = document.getElementById("city-input").value;
+    var districtinput = document.getElementById("district-input").value;
+    var wardinput = document.getElementById("ward-input").value;
+    var streetinput = document.getElementById("street-input").value;
 
-  var phoneinput = document.getElementById("phone-input").value;
+    // Tạo object chứa dữ liệu mới
+    var newData = {
+        name: nameinput,
+        phonenum: phoneinput,
+        email: emailinput,
+        address: {
+            city: cityinput,
+            district: districtinput,
+            ward: wardinput,
+            street: streetinput
+        },
+    };
 
-  var emailinput = document.getElementById("email-input").value;
+    // Gửi dữ liệu lên server
+    const userInforViewProfile = JSON.parse(sessionStorage.getItem('userInfo-cus'));
+    const token = userInforViewProfile.accessToken;
 
-  var cityinput = document.getElementById("city-input").value;
-
-  var districtinput = document.getElementById("district-input").value;
-
-  var wardinput = document.getElementById("ward-input").value;
-
-  var streetinput = document.getElementById("street-input").value;
-
-  // Tạo object chứa dữ liệu mới
-  var newData = {
-    name: nameinput,
-    phonenum: phoneinput,
-    email: emailinput,
-    address: {
-      city: cityinput,
-      district: districtinput,
-      ward: wardinput,
-      street: streetinput
-    },
-  };
-
-  // Gửi dữ liệu lên server
-  var xhr = new XMLHttpRequest();
-  xhr.open("PATCH", "https://aprartment-api.onrender.com/account/editprofile");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.setRequestHeader("token", "Bearer " + token);
-  xhr.send(JSON.stringify(newData));
-
-  // Nhận phản hồi từ server
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      // Cập nhật lại thông tin mới trong sessionStorage
-      sessionStorage.setItem("name", nameinput);
-      sessionStorage.setItem("phone", phoneinput);
-      sessionStorage.setItem("email", emailinput);
-      sessionStorage.setItem("address.city", cityinput);
-      sessionStorage.setItem("address.district", cityinput);
-      sessionStorage.setItem("address.ward", cityinput);
-      sessionStorage.setItem("address.street", cityinput);
-    } else {
-      // Hiển thị thông báo lỗi
-      console.log("Có lỗi xảy ra: " + xhr.status);
-      location.reload();
-    }
-  };
-
-}
-
-
-fetch('https://test-connect-api.onrender.com/account/all')
-  .then(response => response.json())
-  .then(data => {
-    const firstTenAccounts = data.slice(0, 10);
-    console.log(firstTenAccounts); // In ra màn hình console
-  })
-  .catch(error => console.error(error));
-
-/*------------------------check time out session----------*/
-// Hàm kiểm tra session có tồn tại hay không
-// Hàm kiểm tra session tự động xóa hay không và logout nếu có
-function checkSessionTimeout() {
-  setInterval(() => {
-    if (!isSessionExist()) {
-      sessionStorage.clear();
-      window.location.reload();
-      if (!isSessionExist()) {
-        alert("Session has timed out. You will be logged out.");
-        // Thực hiện các thao tác logout ở đây, ví dụ như:
-        window.location.href = "login.html";
-      }
-    }
-  }, 1000); // kiểm tra mỗi giây
+    fetch("https://aprartment-api.onrender.com/account/editprofile", {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            token: `Bearer ${token}`,
+        },
+        body: JSON.stringify(newData),
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            // Cập nhật lại thông tin mới trong sessionStorage
+            sessionStorage.setItem("profileUserInfor", JSON.stringify(newData));
+            location.reload();
+        })
+        .catch((error) => {
+            console.error("There was a problem with the fetch operation:", error);
+            location.reload();
+        });
 }
 

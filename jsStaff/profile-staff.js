@@ -1,6 +1,6 @@
 /*--------------------------------VIEW------------------------------*/
 
-const userInforViewProfile = JSON.parse(sessionStorage.getItem('userInfo'));
+const userInforViewProfile = JSON.parse(sessionStorage.getItem('staffInfor'));
 const token = userInforViewProfile.accessToken;
 const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
 
