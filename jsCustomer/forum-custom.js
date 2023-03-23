@@ -131,7 +131,7 @@ fetch("https://aprartment-api.onrender.com/post/owned-posts", {
         });
 
         // Đếm số phần tử trong mảng comment_id nằm trong mảng posts
-        const commentCount = data.posts.filter(p => p.comment_id?.includes(post._id)).length;
+        // const commentCount = data.posts.filter(p => p.comment_id.comment_list?.includes(post._id)).length;
 
         // Tạo phần tử HTML <li> chứa title và số lượng comment
         const postListItem = document.createElement("li");
@@ -139,7 +139,7 @@ fetch("https://aprartment-api.onrender.com/post/owned-posts", {
 
         const commentCountSpan = document.createElement("span");
         commentCountSpan.className = "count";
-        commentCountSpan.textContent = commentCount;
+        // commentCountSpan.textContent = commentCount;
         postListItem.appendChild(commentCountSpan);
 
         return postListItem;

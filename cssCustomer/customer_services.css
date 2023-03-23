@@ -294,9 +294,6 @@ input {
 
 
 
-.affix {
-  
-}
 
 .myH2 {
   text-align: center;
@@ -377,4 +374,68 @@ footer .install  img{
 footer .copyright{
   width: 100%;
   text-align: center;
+}
+/***********************************/
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e88e5;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565c0;
 }

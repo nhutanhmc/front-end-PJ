@@ -1,785 +1,185 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/customer_services.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="/cssCustomer/customer_services.css" />
-    <link rel="stylesheet" href="/cssCustomer/paging.css" />
-    <link rel="stylesheet" href="/cssCustomer/test.css" />
-    <title>Srevices</title>
-  </head>
 
-  <body>
-    <!-- header -->
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/customer_services.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="/cssCustomer/customer_services.css" />
+  <link rel="stylesheet" href="/cssCustomer/paging.css" />
+  <link rel="stylesheet" href="/cssCustomer/test.css" />
+  <title>Srevices</title>
+</head>
 
-    <nav class="nav">
-      <div class="container">
-        <div class="logo">
-          <a href="homepage.html">Your Logo</a>
-        </div>
-        <div id="mainListDiv" class="main_list">
-          <ul class="navlinks">
-            <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
-            <li><a href="ticket-custom.html" id="ticket-custom-link" >Ticket</a></li>
-            <li><a href="room-cus.html" id="room-custom-link" >Room</a></li>
-            <li><a href="forum.html" id="forum-custom-link" >Forum</a></li>
-            <li><a href="customer_services.html" id="service-custom-link" >Services</a></li>
-            <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
-          </ul>
-        </div>
+<body>
+  <!-- header -->
+
+  <nav class="nav">
+    <div class="container">
+      <div class="logo">
+        <a href="homepage.html">Your Logo</a>
       </div>
-    </nav>
+      <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+          <li><a href="profile-custom.html" id="profile-custom-link">Profile</a></li>
+          <li><a href="ticket-custom.html" id="ticket-custom-link">Ticket</a></li>
+          <li><a href="room-cus.html" id="room-custom-link">Room</a></li>
+          <li><a href="forum.html" id="forum-custom-link">Forum</a></li>
+          <li><a href="customer_services.html" id="service-custom-link">Services</a></li>
+          <li><a href="login-custom.html" id="logout-custom-link">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section style="height: 10vh"></section>
+  <section style="height: 10vh"></section>
 
-    <!-- table element -->
-    <div class="app-container">
-      <div class="app-content">
-        <div class="app-content-header">
-          <h1 class="app-content-headerText">Services list</h1>
-        </div>
-        <div class="app-content-actions">
-          <input class="search-bar" placeholder="Search..." type="text" />
-          <div class="app-content-actions-wrapper">
-            <div class="filter-button-wrapper">
-              <button class="action-button filter jsFilter">
-                <span>Filter</span
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-filter"
-                >
-                  <polygon
-                    points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
-                  />
-                </svg>
-              </button>
-              <div class="filter-menu">
-                <label>Category</label>
-                <select>
-                  <option>All Categories</option>
-                  <option>Furniture</option>
-                  <option>Decoration</option>
-                  <option>Kitchen</option>
-                  <option>Bathroom</option>
-                </select>
-                <label>Status</label>
-                <select>
-                  <option>All Status</option>
-                  <option>Active</option>
-                  <option>Disabled</option>
-                </select>
-                <div class="filter-menu-buttons">
-                  <button class="filter-button reset">Reset</button>
-                  <button class="filter-button apply">Apply</button>
-                </div>
+  <!-- table element -->
+  <div class="app-container">
+    <div class="app-content">
+      <div class="app-content-header">
+        <h1 class="app-content-headerText">Services list</h1>
+      </div>
+      <div class="app-content-actions">
+        <input class="search-bar" placeholder="Search..." type="text" />
+        <div class="app-content-actions-wrapper">
+          <div class="filter-button-wrapper">
+            <button class="action-button filter jsFilter">
+              <span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-filter">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+              </svg>
+            </button>
+            <div class="filter-menu">
+              <label>Category</label>
+              <select>
+                <option>All Categories</option>
+                <option>Furniture</option>
+                <option>Decoration</option>
+                <option>Kitchen</option>
+                <option>Bathroom</option>
+              </select>
+              <label>Status</label>
+              <select>
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Disabled</option>
+              </select>
+              <div class="filter-menu-buttons">
+                <button class="filter-button reset">Reset</button>
+                <button class="filter-button apply">Apply</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="products-area-wrapper gridView">
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="/img/ban-công-căn-hộ-Vinhomes-Grand-Park.jpg"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1511389026070-a14ae610a1be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGludGVyaW9yfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGludGVyaW9yfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S2
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status disabled">Unavaiable</span>
-            </div>
-          </div>
-          <div class="products-row">
-            <button class="cell-more-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
-            </button>
-            <div class="product-cell image">
-              <img
-                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                alt="product"
-              />
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Service ID:</span>S1
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Supplier:</span>Management Board of the Apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Type:</span>management fee of apartment
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Price:</span>300000
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Detail:</span>fire alarm, repair, etc.
-            </div>
-            <div class="product-cell">
-              <span class="cell-label">Status:</span>
-              <span class="status active">Avaiable</span>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="products-area-wrapper gridView">
 
-       </div>
-       </div> 
-    <!--  service detail -->
-    <div id="serviceDetail">
-      <a href="#"
-        ><i id="closeUpdateFormButton" class="material-icons">close</i></a
-      >
-      <h2>SERVICE DETAILS:</h2>
-      <img
-      class="detailImg"
-            src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="product"
-          />
-      <p class="detailInfo">
-        
-        <strong>Service ID:</strong>S1
-        <br /><!--  fix here to get data from db -->
-        <strong>Supplier:</strong>Management Board of the Apartment <br />
-        <strong>Type:</strong>management fee of apartment <br />
-        <strong>Price:</strong>300000 <br />
-        <strong>Detail:</strong>fire alarm, repair, etc. <br />
-        <strong>Status:</strong>avaiable <br />
-      </p>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <!--  service detail -->
+  <div id="serviceDetail">
+    <a href="#"><i id="closeUpdateFormButton" class="material-icons">close</i></a>
+    <h2>SERVICE DETAILS:</h2>
+    <img class="detailImg"
+      src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+      alt="product" />
+    <p class="detailInfo">
+
+      <strong>Service ID:</strong>S1
+      <br /><!--  fix here to get data from db -->
+      <strong>Supplier:</strong>Management Board of the Apartment <br />
+      <strong>Type:</strong>management fee of apartment <br />
+      <strong>Price:</strong>300000 <br />
+      <strong>Detail:</strong>fire alarm, repair, etc. <br />
+      <strong>Status:</strong>avaiable <br />
+    </p>
+  </div>
+
+
+  
+  <!-- footer -->
+  <footer>
+    <div class="col">
+      <img class="logo" src="/img/logo.png" alt="">
+      <h4>Contact</h4>
+      <p><strong>Address: </strong> 150/3c Man Thien, HCM City</p>
+      <p><strong>Phone: </strong> 0906512106</p>
+      <p><strong>Hours: </strong>07:00 - 22:00 Mon-Sat</p>
+      <div class="follow">
+        <h4>Follow Up</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
     </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="col">
-        <img class="logo" src="/img/logo.png" alt="">
-        <h4>Contact</h4>
-        <p><strong>Address: </strong> 150/3c Man Thien, HCM City</p>
-        <p><strong>Phone: </strong> 0906512106</p>
-        <p><strong>Hours: </strong>07:00 - 22:00 Mon-Sat</p>
-        <div class="follow">
-          <h4>Follow Up</h4>
-          <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest-p"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-      </div>
-  
-      <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-      </div>
-  
-      <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Goole Play</p>
-        <div class="row">
-          <img src="/img/app.jpg" alt="">
-          <img src="/img/play.jpg" alt="">
-        </div>
-        <p>Secured Payment Gateways</p>
-        <img src="/img/pay.png" alt="">
-      </div>
-  
-      <div class="copyright">
-        <p>TamDXT13062001</p>
-      </div>
-    </footer>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
 
-    <!-- Jquery needed -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
 
-    <!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <script src="/js/customer_services.js"></script>
-    <script src="/js/test.js"></script>
-    <script>
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 50) {
-          $(".nav").addClass("affix");
-          console.log("OK");
-        } else {
-          $(".nav").removeClass("affix");
-        }
-      });
-    </script>
-  </body>
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Goole Play</p>
+      <div class="row">
+        <img src="/img/app.jpg" alt="">
+        <img src="/img/play.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="/img/pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+      <p>TamDXT13062001</p>
+    </div>
+  </footer>
+
+  <!-- Jquery needed -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- Function used to shrink nav bar removing paddings and adding black background -->
+  <script src="/js/customer_services.js"></script>
+  <script src="/js/test.js"></script>
+  <script>
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 50) {
+        $(".nav").addClass("affix");
+        console.log("OK");
+      } else {
+        $(".nav").removeClass("affix");
+      }
+    });
+  </script>
+
+    <script src="jsCustomer/customer_services.js"></script>
+</body>
+
 </html>

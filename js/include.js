@@ -23,3 +23,7 @@ document.getElementById("bill-link").addEventListener("click", function () {
 document.getElementById("ticket-link").addEventListener("click", function () {
     window.location.href = "ticket.html";
 });
+
+document.getElementById("service-link").addEventListener("click", function () {
+    window.location.href = "service.html";
+});

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="cssCustomer/detail.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+
+<body>
+    <a href="/room-cus.html" class="back"><i class='bx bx-arrow-back'></i>Back</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="invoice-title">
+                    <h2>Your bill</h2>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <address>
+                            <strong>Status</strong><br>
+                            <div class="status-detail" id="status-detail"></div>
+                        </address>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <address>
+                            <strong>Due date:</strong><br>
+                            <div class="dueDate-detail" id="dueDate-detail"></div>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong></strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <td><strong>Name</strong></td>
+                                        <td class="text-center"><strong>supplier</strong></td>
+                                        <td class="text-center"><strong>timePerform</strong></td>
+                                        <td class="text-right"><strong>price</strong></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- foreach ($order->lineItems as $line) or some such thing here -->
+
+                                </tbody>
+                                <div>
+                                    <td>
+                                        <div>Totoal Price</div>
+                                        <div class="totalPrice-detail" id="totalPrice-detail"></div>
+                                    </td>
+                    
+                                    <td>
+                                        <button class="pay-bill" id="pay-bill">Thanh toán</button>
+                                    </td>
+                                </div>
+                                    
+                                    
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+    // const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
+    document.getElementById('username').innerHTML = userInfo.username;
+    document.getElementById('role').innerHTML = userInfo.role;
+    document.getElementById('username-view').innerHTML = userInfo.username;
+    document.getElementById('username-edit').innerHTML = userInfo.username;
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/include.js"></script>
+<script src="jsCustomer/detail.js"></script>
+
+</html>

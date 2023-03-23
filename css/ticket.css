@@ -17,6 +17,19 @@ html{
 ul{
     list-style: none;
 }
+/* huy bo, bi tu choi */
+.deny{
+    color: brown;
+}
+
+/* dang tiep nhan, dang xu ly */
+.progress{
+    color: rgb(255, 217, 0);
+}
+/*da hoan thanh */
+.accept{
+    color: #2a94b4;
+}
 
 a{
     text-decoration: none;
@@ -81,7 +94,7 @@ ul li:hover a{
 
 
 #interface{
-    
+    margin-top: 10px;
     margin-left: 280px;
     margin-right: 50px;
     width: 100%;
@@ -123,7 +136,33 @@ ul li:hover a{
     font-size: 14px;
 }
 
+#interface .navigation .statuss{
+    margin: 4px 10px;
+}
 
+#interface .navigation .statuss p{
+    margin-top: -26px;
+    margin-bottom: -12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#interface .navigation .statuss .filterStatus{
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    float: left;
+}
+
+#interface .navigation .statuss .filterStatus-type{
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    float: left;
+}
 
 
 #interface .navigation .create button{
@@ -229,10 +268,7 @@ tbody tr td{
     border-radius: 40px;
 }
 
-.accept{
-    background: #d7fada;
-    padding: 2px 10px;
-}
+
 
 .Rejected{
     background: #e9a14e;
@@ -306,55 +342,113 @@ tbody tr td{
   }
   
   #dialog-box {
-    width: 50%;
-    max-width: 600px;
-    margin: 10% auto;
+    width: 80%;
+    height: 730px;
+    margin: 5% auto;  
     background: #fff;
-    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   #dialog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    background-color: #2a94b4;
+    padding: 50px;
+    border-radius: 5px;
   }
   
   #dialog-header h2 {
     margin: 0;
+    color: #fff;
+    text-align: center;
+    
   }
   
   #dialog-close {
+    position: absolute;
     border: none;
     background: none;
+    color: #fff;
     font-size: 24px;
     cursor: pointer;
+    float: right;
+    top: 0;
+    right: 0;
+    margin-right: 12px;
   }
   
   #dialog-content {
     margin-top: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    margin:  30px;
   }
   
   #feedback-box {
-    border: 1px solid #ccc;
+    border: 1px solid #111111;
     padding: 10px;
     min-height: 100px;
     margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 6px;
+    width: 100%;
+    
+  }
+
+  #filterTypeOfStaff{
+    width: 8%;
+    height: 30px;
+    border-radius: 6px;
   }
   
+  .filterStaff{
+    width: 5%;
+    height: 30px;
+    border-radius: 6px;
+  }
   #dialog-buttons {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: -38px;
   }
+
+  
   
   #dialog-buttons button {
     margin-left: 10px;
+    width: 8%;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
   }
   
   .cus-img-tic{
     display: flex;
+  }
+
+  #dialog-content-staff{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    margin:  30px;
+  }
+
+  #dialog-buttons-staff{
+    display: flex;
+    justify-content: center;
+    margin-top: 68px;
+  }
+
+  #dialog-buttons-staff button {
+    margin-left: 10px;
+    width: 8%;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
   }
 
   /*--------------------------*/

@@ -22,7 +22,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const title = document.querySelector('input[name="title"]').value;
-    const type = document.querySelector('input[name="type"]').value;
+    const dropdown = document.querySelector('select[name="type"]');
+    const type = dropdown.value;
     const content = document.querySelector('textarea[name="content"]').value;
 
     const fileList = inputElement.files;
@@ -269,6 +270,8 @@ function loadData(page) {
                 confirmButton.addEventListener("click", () => {
                     const status = ticket.status;
                     const message = 'Đồng ý';
+                    const message1 = 'Thành công';
+
                     if (status === 'Đã tiếp nhận') {
                         fetch(`https://aprartment-api.onrender.com/ticket/confirm-ticket/${ticket._id}`, {
                             method: "POST",
@@ -279,6 +282,24 @@ function loadData(page) {
                             body: JSON.stringify({
                                 status: status,
                                 message: message
+                            })
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log(data);
+                                loadData(page);
+                            })
+                            .catch(error => console.error(error));
+                    } else if (status === 'Đã được xử lí') {
+                        fetch(`https://aprartment-api.onrender.com/ticket/confirm-ticket/${ticket._id}`, {
+                            method: "POST",
+                            headers: {
+                                "token": `Bearer ${token}`,
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                status: status,
+                                message: message1
                             })
                         })
                             .then(response => response.json())
@@ -300,6 +321,7 @@ function loadData(page) {
                 cancelButton.addEventListener("click", () => {
                     const status = ticket.status;
                     const message = 'Hủy bỏ';
+                    const message2 = 'Thất bại';
                     if (status === 'Đã tiếp nhận') {
                         fetch(`https://aprartment-api.onrender.com/ticket/cancel-ticket/${ticket._id}`, {
                             method: "POST",
@@ -310,6 +332,24 @@ function loadData(page) {
                             body: JSON.stringify({
                                 status: status,
                                 message: message
+                            })
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log(data);
+                                loadData(page);
+                            })
+                            .catch(error => console.error(error));
+                    } else if (status === 'Đã được xử lí') {
+                        fetch(`https://aprartment-api.onrender.com/ticket/cancel-ticket/${ticket._id}`, {
+                            method: "POST",
+                            headers: {
+                                "token": `Bearer ${token}`,
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                status: status,
+                                message: message2
                             })
                         })
                             .then(response => response.json())
@@ -363,7 +403,6 @@ function loadData(page) {
 
         })
         .catch((error) => console.error(error));
-    loadData(data);
 }
 
 

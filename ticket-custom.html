@@ -11,18 +11,23 @@
     <nav class="nav">
         <div class="container">
             <div class="logo">
-                <a href="homepage.html" id="profile-custom-link">Your Logo</a>
+                <a href="homepage.html">
+                    <img src="https://img.freepik.com/premium-vector/apartment-building-business-logo-design_57043-73.jpg"
+                        jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label=""
+                        alt="Premium Vector | Apartment building business logo design" data-noaft="1"
+                        style="width: 140px; height: 61px">
+                </a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                  <li><a href="profile-custom.html" id="profile-custom-link" >Profile</a></li>
-                  <li><a href="ticket-custom.html" id="ticket-custom-link" >Ticket</a></li>
-                  <li><a href="room-cus.html" id="room-custom-link" >Room</a></li>
-                  <li><a href="forum.html" id="forum-custom-link" >Forum</a></li>
-                  <li><a href="customer_services.html" id="service-custom-link" >Services</a></li>
-                  <li><a href="login-custom.html" id="logout-custom-link" >Logout</a></li>
+                    <li><a href="profile-custom.html" id="profile-custom-link">Profile</a></li>
+                    <li><a href="ticket-custom.html" id="ticket-custom-link">Ticket</a></li>
+                    <li><a href="room-cus.html" id="room-custom-link">Room</a></li>
+                    <li><a href="forum.html" id="forum-custom-link">Forum</a></li>
+                    <li><a href="customer_services.html" id="service-custom-link">Services</a></li>
+                    <li><a href="login-custom.html" id="logout-custom-link">Logout</a></li>
                 </ul>
-              </div>
+            </div>
         </div>
     </nav>
 
@@ -53,7 +58,9 @@
                             <option value="Đang xử lí">Đang xử lí</option>
                             <option value="Đã được xử lí">Đã được xử lí</option>
                             <option value="Xử lí thất bại">Xử lí thất bại</option>
+                            <option value="Hoàn thành">Hoàn thành</option>
                         </select>
+
                     </div>
                     <div class="statuss">
                         <p>Type: </p>
@@ -126,7 +133,13 @@
                     <h2>Ticket</h2>
                     <form action="" class="send-ticket-customer">
                         <input type="text" name="title" class="text-box" placeholder="Title" required>
-                        <input type="text" name="type" class="text-box" placeholder="Type" required>
+                        <select name="type" class="dropdown" required>
+                            <option value="">Chọn loại dịch vụ</option>
+                            <option value="Ve sinh">Vệ sinh</option>
+                            <option value="An ninh">An ninh</option>
+                            <option value="Noi that">Nội thất</option>
+                        </select>
+
                         <textarea name="content" rows="5" placeholder="Content" required></textarea>
                         <div>
                             <div>Chọn ảnh(tối đa 3 ảnh)</div>
@@ -143,7 +156,12 @@
 
     <footer>
         <div class="col">
-            <img class="logo" src="logo.png" alt="">
+            <a href="homepage.html">
+                <img src="https://img.freepik.com/premium-vector/apartment-building-business-logo-design_57043-73.jpg"
+                    jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label=""
+                    alt="Premium Vector | Apartment building business logo design" data-noaft="1"
+                    style="width: 160px; height: 80px">
+            </a>
             <h4>Contact</h4>
             <p><strong>Address: </strong> 150/3c Man Thien, HCM City</p>
             <p><strong>Phone: </strong> 0906512106</p>
