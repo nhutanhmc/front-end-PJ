@@ -1,5 +1,5 @@
 body{
-    font-family: 'roboto',sans-serif;
+  font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -159,6 +159,19 @@ body{
 -moz-box-shadow: 2px 4px 23px 0px rgba(43,19,19,0.52);
 }
 
+.tdata a{
+  padding: 5px 8px;
+  background-color: #9b8f8f;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.tdata a:hover{
+  text-decoration: none;
+  color: antiquewhite;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -239,6 +252,7 @@ tbody tr td{
 }
 
 /* footer */
+
 footer{
     display: flex;
     flex-wrap: wrap;
@@ -303,3 +317,5 @@ footer{
     width: 100%;
     text-align: center;
   }
+
+  

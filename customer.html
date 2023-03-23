@@ -16,7 +16,7 @@
             <li><a href="#" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
             <li><a href="#" id="customer-link" class="active"> <i class='bx bx-user' ></i> Customer </a></li>
             <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
-            <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href="#" id="service-link"> <i class='bx bx-user-voice' ></i> Service </a></li>
             <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
         </ul>
@@ -45,7 +45,7 @@
                         <td>Role</td>
                         <td>Status</td>
                         <td>Email</td>
-                        <td>View</td>
+                        <td>Phone</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,29 +66,32 @@
                         </td>
 
                         <td class="edit">
-                    
-                        </td>
+                          </td>
                     </tr>
                 </tbody>
             </table>
             
         </div>
         <div class="pagination">
-            <a href="#" class="pagination__prev">&lt;</a>
-            <a href="#" class="pagination__page">1</a>
-            <a href="#" class="pagination__page">2</a>
-            <a href="#" class="pagination__page">3</a>
-            <a href="#" class="pagination__page">4</a>
-            <a href="#" class="pagination__page">5</a>
-            <a href="#" class="pagination__page">6</a>
-            <a href="#" class="pagination__page">7</a>
-            <a href="#" class="pagination__page">8</a>
-            <a href="#" class="pagination__next">&gt;</a>
-          </div>
+            <div class="pagination__buttons"></div>
+        </div>
              
     </section>
+    <div id="dialog" class="hide">
+        <div class="content">
+            <div class="header">
+                <h2>Thông tin ticket</h2>
+                <button id="close-dialog" class="js-close-dialog">X</button>
+            </div>
+            <div class="tbody">
+                <p>Your content:</p>
+                <p>Feedback:</p>
+                <span id="name"></span>
+            </div>
 
+        </div>
 
+    </div>
 </body>
 <script src="js/include.js"></script>
 <script src="js/customer.js"></script>

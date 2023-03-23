@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <header id="username">Name</header>
+        <ul>
+            <li><a class="active" href="#"> <i class='bx bxs-dashboard'></i> DashBoard </a></li>
+            <li><a id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
+            <li><a href="#" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
+            <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
+            <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark'></i> Ticket </a></li>
+            <li><a href="#"> <i class='bx bx-user-voice'></i> Service </a></li>
+            <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
+            <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <div class="EmptyRoom ">
+            <h2 class="title"><i class='bx bx-home'></i>Empty Room</h2>
+            <h1 class="num">50</h1>
+        </div>
+
+        <div class="ticket">
+            <h2 class="title"><i class='bx bx-mail-send'></i>Ticket Complete</h2>
+            <h1 class="num">50</h1>
+        </div>
+        <div class="cplete">
+            <h2 class="title"><i class='bx bx-time'></i>Waiting Ticket</h2>
+            <h1 class="num">40</h1>
+        </div>
+        <div class="fail">
+            <h2 class="title"><i class='bx bx-x-circle'></i> Ticket Fail</h2>
+            <h1 class="num">10</h1>
+        </div>
+
+    </div>
+
+    <div class="data-container">
+        <div class="datas-EmptyRoom ">
+            <h2>List New Ticket </h2>
+            <div class="board-ticket">
+                <table width="100%" id="accountTable">
+                    <thead>
+                        <tr>
+                            <td>Title</td>
+                            <td>type</td>
+                            <td>status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>yeu cau phuc vu</td>
+                            <td>Cơ sở hạ tầng</td>
+                            <td>Đã được xử lí</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="datas-ticket ">
+            <h2>List New Complete Ticket </h2>
+            <div class="board-ticket">
+                <table width="100%" id="accountTable">
+                    <thead>
+                        <tr>
+                            <td>Title</td>
+                            <td>type</td>
+                            <td>status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>yeu cau phuc vu</td>
+                            <td>Cơ sở hạ tầng</td>
+                            <td>Đã được xử lí</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="datas-ticket ">
+            <h2>List New Fail Ticket</h2>
+            <div class="board-ticket">
+                <table width="100%" id="accountTable">
+                    <thead>
+                        <tr>
+                            <td>Title</td>
+                            <td>type</td>
+                            <td>status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>yeu cau phuc vu</td>
+                            <td>Cơ sở hạ tầng</td>
+                            <td>Đã được xử lí</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+    // const profileUserInfor = JSON.parse(sessionStorage.getItem('profileUserInfor'));
+    document.getElementById('username').innerHTML = userInfo.username;
+    document.getElementById('role').innerHTML = userInfo.role;
+    document.getElementById('username-view').innerHTML = userInfo.username;
+    document.getElementById('username-edit').innerHTML = userInfo.username;
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/include.js"></script>
+<script src="js/dashboard.js"></script>
+
+</html>

@@ -225,23 +225,6 @@ function loadData(page) {
                         .catch(error => console.error(error));
                     });
                 
-                    // denyButton.addEventListener("click", () => {
-                    //     const feedback = document.getElementById("feedback-box").textContent;
-                    //     fetch(`https://aprartment-api.onrender.com/ticket/deny-ticket/${account._id}`, {
-                    //         method: "POST",
-                    //         body: JSON.stringify({ feedback: feedback, status: account.status }),
-                    //         headers: {
-                    //             "Content-type": "application/json; charset=UTF-8",
-                    //             "token": `Bearer ${token}`,
-                    //         },
-                    //     })
-                    //     .then(response => response.json())
-                    //     .then(data => {
-                    //         console.log(data);
-                    //         loadData(page);
-                    //     })
-                    //     .catch(error => console.error(error));
-                    // });
                 };
                 
                 button3.addEventListener("click", () => {

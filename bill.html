@@ -19,7 +19,7 @@
             <li><a href="#" id="room-link"> <i class='bx bx-bed' ></i> Room </a></li>
             <li><a href="#" id="customer-link"> <i class='bx bx-user' ></i> Customer </a></li>
             <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark' ></i> Ticket </a></li>
-            <li><a href="#"> <i class='bx bx-user-voice' ></i> Service </a></li>
+            <li><a href="#" id="service-link"> <i class='bx bx-user-voice' ></i> Service </a></li>
             <li><a href="#" id="bill-link" class="active"> <i class='bx bxs-credit-card' ></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out' ></i> Logout </a></li>
         </ul>
@@ -32,14 +32,8 @@
                     <i class='bx bx-search'></i>
                     <input type="text" placeholder="Search">
                 </div>
-                <div class="create">
-                    <a href="">
-                        <i class="fa-solid fa-plus"></i>
-                        Create
-                    </a>
-                </div>
                 <div class="sort">
-                    <input type="date">
+                    <input type="date" id="date">
                 </div>
                 <div class="profile">
                     <a href="#"><img src="/img/IMG_5824.JPG" alt=""></a>
@@ -51,50 +45,24 @@
             <table width="100%">
                 <thead>
                     <tr>
-                        <td>NumID</td>
-                        <td>Date</td>
-                        <td>Bill Of Cus</td>
-                        <td>Fee service</td>
-                        <td>Total</td>
-                        <td>Paid</td>
-                        <td>Note</td>
+                        <td>Number of Room</td>
+                        <td>Status</td>
+                        <td>DueDate</td>
+                        <td>totalPrice</td>
+                        <td>Detail</td>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="numid">
-                            <h5>IDT2010</h5>
-                        </td>
-
-                        <td class="dateofbill">
-                            <h5>02/05/2002</h5>
-                        </td>
-
-                        <td class="actives">
-                            <a href=""><p>Eula Lawrence</p></a>
-                        </td>
-
-                        <td class="role">
-                            <a href="">
-                                <p>20$</p>
-                            </a>
-                        </td>
-
-                        <td class="total">
-                            <p>500$</p>
-                        </td>
-                        <td class="checkpaid">
-                            <input type="checkbox">
-                        </td>
-                        <td class="note">
-                            <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                        </td>
-                    </tr>
+                <tbody id="table-body">
+                    
                 </tbody>
             </table>
+            
         </div>
-
+        <div class="pagination">
+            <div class="pagination__buttons"></div>
+        </div>
     </section>
 </body>
       <script src="/js/include.js"></script>  
+      <script src="/js/bill.js"></script>  
     </html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/roomlist.css">
+    <link rel="stylesheet" href="/css/service.css">
     <!-- <link rel="stylesheet" href="/css/admin.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -25,10 +25,10 @@
         <header id="username">My Name</header>
         <ul>
             <li><a id="profile-link" href="#"> <i class='bx bxs-user-detail'></i> Profile </a></li>
-            <li><a href="#" class="active" id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
+            <li><a href="#"  id="room-link"> <i class='bx bx-bed'></i> Room </a></li>
             <li><a href="#" id="customer-link"> <i class='bx bx-user'></i> Customer </a></li>
             <li><a href="#" id="ticket-link"> <i class='bx bx-bookmark'></i> Ticket </a></li>
-            <li><a href="#" id="service-link"> <i class='bx bx-user-voice'></i> Service </a></li>
+            <li><a href="#" class="active" id="service-link"> <i class='bx bx-user-voice'></i> Service </a></li>
             <li><a href="#" id="bill-link"> <i class='bx bxs-credit-card'></i> Bill </a></li>
             <li><a href="#" id="logout-link"> <i class='bx bx-log-out'></i> Logout </a></li>
         </ul>
@@ -42,7 +42,7 @@
                     <input type="text" placeholder="Search">
                 </div>
                 <div class="create js-create">
-                    <button>Create New Room<i class='bx bx-plus'></i></button>
+                    <button>Create New Service<i class='bx bx-plus'></i></button>
                 </div>
                 <div class="statuss">
                     <p>Status:</p>
@@ -62,10 +62,11 @@
             <table width="100%">
                 <thead>
                     <tr>
-                        <td>Num Room</td>
-                        <td>Type</td>
-                        <td>Status</td>
+                        <td>Name</td>
+                        <td>supplier</td>
+                        <td>type</td>
                         <td>Price</td>
+                        <td>Status</td>
                         <td>Detail</td>
                         <td>Edit</td>
                     </tr>
@@ -85,14 +86,11 @@
             <div class="contact-form col-50">
                 <h2>Ticket</h2>
                 <form action="" class="send-ticket-customer">
-                    <input type="text" name="roomnum" class="text-box" placeholder="roomnum" required>
-                    <input type="text" name="type" class="text-box" placeholder="Type" required>
-                    <input type="number" name="bedroom" class="text-box" placeholder="bedroom" required min="0">
-                    <input type="number" name="livingroom" class="text-box" placeholder="livingroom" required min="0">
-                    <input type="number" name="bathroom" class="text-box" placeholder="bathroom" required min="0">
-                    <input type="number" name="kitchen" class="text-box" placeholder="kitchen" required min="0">
-                    <input type="text" name="view" class="text-box" placeholder="view" required>
+                    <input type="text" name="name" class="text-box" placeholder="name" required>
+                    <input type="text" name="type" class="text-box" placeholder="type" required>
                     <input type="number" name="price" class="text-box" placeholder="price" required min="0">
+                    <input type="text" name="supplier" class="text-box" placeholder="supplier" required>
+                    <input type="text" name="detail" class="text-box" placeholder="detail" required>
                     <div>
                         <div>Chọn ảnh(tối đa 3 ảnh)</div>
                         <input type="file" class="chooseFileImg" name="" id="imageFile"
@@ -105,27 +103,22 @@
     </div>
 
     <dialog id="roomDetailDialog">
+        <button class="close-button">&times;</button>
         <div class="dialog-content">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
             <label for="type">type:</label>
             <input type="text" id="type" name="type"><br><br>
 
-            <label for="bedroom">bedroom:</label>
-            <input type="number" id="bedroom" name="bedroom"><br><br>
-
-            <label for="livingroom">livingroom:</label>
-            <input type="number" id="livingroom" name="livingroom"><br><br>
-
-            <label for="bathroom">bathroom:</label>
-            <input type="number" id="bathroom" name="bathroom"><br><br>
-
-            <label for="kitchen">kitchen:</label>
-            <input type="number" id="kitchen" name="kitchen"><br><br>
-
-            <label for="view">view:</label>
-            <input type="text" id="view" name="view"><br><br>
-
             <label for="price">price:</label>
-            <input type="text" id="price" name="price"><br><br>
+            <input type="number" id="price" name="price"><br><br>
+
+            <label for="supplier">supplier:</label>
+            <input type="text" id="supplier" name="supplier"><br><br>
+
+            <label for="detail">detail:</label>
+            <input type="text" id="detail" name="detail"><br><br>
 
             <div>
                 <div>Chọn ảnh(tối đa 3 ảnh)</div>
@@ -206,7 +199,7 @@
     })
 </script>
 <script src="/js/include.js"></script>
-<script src="/js/roomlist.js"></script>
+<script src="/js/service.js"></script>
 
 
 </html>

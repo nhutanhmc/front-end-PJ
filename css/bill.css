@@ -251,3 +251,24 @@ tbody tr td{
 .total p{
     font-size: 17px;
 }
+/*---------------------*/
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.pagination button {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 16px;
+	margin: 0 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.pagination button.active {
+	background-color: #333;
+	color: #fff;
+}

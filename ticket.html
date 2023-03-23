@@ -34,12 +34,13 @@
                     <p>Status:</p>
                     <select name="filterStatus" id="filterStatus" class="filterStatus">
                         <option value="All">All</option>
-                        <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
-                        <option value="Đã tiếp nhận">Đã tiếp nhận</option>
-                        <option value="Đơn bị từ chối">Đơn bị từ chối</option>
-                        <option value="Hủy bỏ">Hủy bỏ</option>
-                        <option value="Đang xử lí">Đang xử lí</option>
-                        <option value="Đã được xử lí">Đã được xử lí</option>
+                        <option  value="Chờ tiếp nhận">Chờ tiếp nhận</option>
+                        <option  value="Đã tiếp nhận">Đã tiếp nhận</option>
+                        <option  value="Đơn bị từ chối">Đơn bị từ chối</option>
+                        <option  value="Hủy bỏ">Hủy bỏ</option>
+                        <option  value="Đang xử lí">Đang xử lí</option>
+                        <option  value="Đã được xử lí">Đã được xử lí</option>
+                        <option  value="Xử lí thất bại">Xử lí thất bại</option>
                     </select>
                 </div>
                 <div class="statuss">
@@ -85,10 +86,10 @@
                 <button id="dialog-close">&times;</button>
             </div>
             <div id="dialog-content">
-                <div>Customer content:</div>
+                <div style="color: rgb(105, 105, 102);">Customer content:</div>
                 <div id="image-list"></div>
                 <div>Your feedback</div>
-                <div>Feedback: </div>
+                <div style="color: rgb(105, 105, 102);">Feedback: </div>
                 <div contenteditable="true" id="feedback-box"></div>
                 <select name="filterTypeOfStaff" id="filterTypeOfStaff">
                     <option value=""></option>
@@ -99,10 +100,9 @@
                 <select name="filterStaff" id="filterStaff" class="filterStaff">
                 </select>
                 <div id="dialog-buttons">
-                    <button id="accept-button">Accept</button>
-                    <button id="deny-button">Deny</button>
-                </div>
-                
+                    <button id="accept-button" style="background-color: rgb(12, 143, 204);">Accept</button>
+                    <button id="deny-button" style="background-color: brown;">Deny</button>
+                </div>                
             </div>
         </div>
     </div>
